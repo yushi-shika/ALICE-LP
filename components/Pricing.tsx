@@ -57,12 +57,6 @@ const Pricing: React.FC<PricingProps> = ({ theme }) => {
                 }
               `}
             >
-              {tier.highlight && (
-                <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-white ${theme.colors.accent} shadow-lg shadow-sky-400/30`}>
-                  Most Popular
-                </div>
-              )}
-
               <div className="mb-8">
                 <h3 className={`text-xl font-medium mb-2 ${theme.colors.text} ${theme.fonts.headline}`}>{tier.name}</h3>
                 <div className="flex items-baseline gap-1">
@@ -83,13 +77,11 @@ const Pricing: React.FC<PricingProps> = ({ theme }) => {
                 ))}
               </ul>
 
-              <button className={`w-full py-4 rounded-xl font-semibold transition-colors
-                ${tier.highlight 
-                  ? `${theme.colors.accent} text-white shadow-lg hover:brightness-110` 
-                  : `bg-slate-100 ${theme.colors.text} hover:bg-slate-200`
-                }
-              `}>
-                Start Connection
+              <button
+                disabled
+                className="w-full py-4 rounded-xl font-semibold border border-slate-200/80 bg-white/60 text-slate-500 cursor-not-allowed"
+              >
+                Coming soon
               </button>
             </div>
           ))}

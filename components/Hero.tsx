@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeConfig } from '../types';
-import { ArrowRight } from 'lucide-react';
 
 const IMAGES = ['/AR-image1.png', '/AR-image2.png', '/AR-image3.png'];
+const CALLOUTS = [
+  'Visual analysis complete. Enhancing reality with contextual data layers.',
+  'Ambient cues mapped. I’ll surface what matters as you move.',
+  'People, places, feelings—synced. Your world is now annotated in real time.'
+];
 
 interface HeroProps {
   theme: ThemeConfig;
@@ -17,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ theme }) => {
 
     const timeout = setTimeout(() => {
       setCurrentImageIndex((prev) => prev + 1);
-    }, 3000); // Change image every 3 seconds
+    }, 6500); // Change image every ~6.5 seconds
 
     return () => clearTimeout(timeout);
   }, [currentImageIndex]);
@@ -43,11 +47,7 @@ const Hero: React.FC<HeroProps> = ({ theme }) => {
             Not a bot. A presence. The first AI companion designed to live alongside you in the physical world.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button className={`px-8 py-4 rounded-full text-lg font-semibold transition-transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 ${theme.colors.accent} ${theme.colors.buttonText} shadow-lg shadow-sky-200/50`}>
-              Request Access <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
+          {/* CTA intentionally removed per request */}
         </div>
 
         {/* Visual Content */}
@@ -75,7 +75,7 @@ const Hero: React.FC<HeroProps> = ({ theme }) => {
                     <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span> Online
                   </span>
                 </div>
-                <p className="text-lg font-serif italic">"Visual analysis complete. Enhancing reality with contextual data layers."</p>
+                <p className="text-lg font-serif italic">"{CALLOUTS[currentImageIndex] ?? CALLOUTS[CALLOUTS.length - 1]}"</p>
               </div>
             </div>
           </div>

@@ -23,11 +23,9 @@ function App() {
             ALICE<span className="text-xs align-top opacity-50">®</span>
           </div>
           <div className="hidden md:flex gap-8 text-sm font-medium opacity-80">
-            <a href="#" className={`hover:opacity-100 ${theme.colors.text}`}>Vision</a>
-            <a href="#" className={`hover:opacity-100 ${theme.colors.text}`}>Features</a>
-            <a href="#" className={`hover:opacity-100 ${theme.colors.text}`}>Pricing</a>
+            <a href="#" className={`hover:opacity-100 ${theme.colors.text}`}>What we see?</a>
+            <a href="#" className={`hover:opacity-100 ${theme.colors.text}`}>Manifest</a>
           </div>
-
         </div>
       </nav>
 
