@@ -1,4 +1,16 @@
 {
 	"telemetryDisabled": false,
-	"cliId": "172a1b58-3187-4adf-80c7-d18a3e42a1d9"
+	"cliId": "172a1b58-3187-4adf-80c7-d18a3e42a1d9",
+	"userId": "650b94953e41667260c9ce22",
+	"users": {
+		"650b94953e41667260c9ce22": {
+			"id": "650b94953e41667260c9ce22",
+			"name": null,
+			"email": "yushi6577@gmail.com",
+			"auth": {
+				"token": "nfc_ZQceV5h8J56D3hwzC8LaJumLHzHQ42Bn57c8",
+				"github": {}
+			}
+		}
+	}
 }
