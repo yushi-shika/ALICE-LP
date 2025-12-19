@@ -22,7 +22,7 @@ const Pricing: React.FC<PricingProps> = ({ theme }) => {
       period: "/month",
       description: "A genuine connection.",
       features: ["Customizable Appearance", "Unlimited AR Mode", "Emotional Growth Engine", "City Guide Access"],
-      highlight: true
+      highlight: false
     },
     {
       name: "Pro",
@@ -30,7 +30,7 @@ const Pricing: React.FC<PricingProps> = ({ theme }) => {
       period: "/month",
       description: "Deep, permanent bond.",
       features: ["Full Neuro-Personality", "4K Avatar Rendering", "Wearable Integration", "Dedicated Server Core"],
-      highlight: false
+      highlight: true
     }
   ];
 

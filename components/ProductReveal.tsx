@@ -78,19 +78,19 @@ const ProductReveal: React.FC<ProductRevealProps> = ({ theme }) => {
       <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-white/10 pointer-events-none" />
 
       <div className="container mx-auto relative z-10 w-full max-w-7xl">
-        <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-[2rem] md:rounded-[3rem] shadow-2xl overflow-hidden bg-slate-900/60 group isolate border border-white/30">
+        <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-[16/9] lg:aspect-[21/9] rounded-[2rem] md:rounded-[3rem] shadow-2xl overflow-hidden bg-slate-900/60 group isolate border border-white/30">
           {/* 1. Real World Layer */}
           <div className="absolute inset-0 z-0">
             <img
               src="/background-image.jpg"
               alt="Street-level daytime view walking along Powell Street in San Francisco"
-              className="w-full h-full object-cover object-center opacity-95"
+              className="w-full h-full object-cover object-[center_top] sm:object-center opacity-95"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent mix-blend-multiply" />
           </div>
 
           {/* 2. Character Layer */}
-          <div className="absolute bottom-0 right-2 md:right-[8%] h-[88%] w-auto z-10 flex items-end justify-center pointer-events-none">
+          <div className="absolute bottom-0 right-[-2%] sm:right-2 md:right-[8%] h-[70%] sm:h-[78%] md:h-[88%] w-auto z-10 flex items-end justify-center pointer-events-none">
             <img
               src="/character.png"
               className="h-full w-auto object-contain object-bottom drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)]"
@@ -99,7 +99,7 @@ const ProductReveal: React.FC<ProductRevealProps> = ({ theme }) => {
           </div>
 
           {/* 3. AR HUD Layer */}
-          <div className="absolute inset-0 z-20 p-5 md:p-10 flex flex-col justify-between pointer-events-none select-none">
+          <div className="absolute inset-0 z-20 p-4 sm:p-6 md:p-10 flex flex-col justify-between pointer-events-none select-none">
             {/* Top HUD */}
             <div className="flex justify-between items-start">
               <div className="flex flex-col gap-2">
@@ -124,7 +124,7 @@ const ProductReveal: React.FC<ProductRevealProps> = ({ theme }) => {
 
             {/* Bottom HUD: Chat */}
             <div className="flex flex-col-reverse md:flex-row justify-between items-start md:items-end gap-6">
-              <div className="max-w-md w-full md:w-auto pointer-events-auto">
+              <div className="max-w-md w-full md:w-auto pointer-events-auto hidden md:block">
                 <div className="flex items-end gap-4 mb-4">
                   <div className="w-full max-w-lg space-y-3 flex flex-col">
                     <div

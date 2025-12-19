@@ -27,8 +27,8 @@ const NavBar: React.FC<{ theme: ReturnType<typeof getTheme>; isScrolled: boolean
         <div className="hidden md:flex gap-8 text-sm font-medium opacity-80">
           {onHome ? (
             <>
-              <a href="#" className={`hover:opacity-100 ${theme.colors.text}`}>Teammember</a>
-              <a href="#" className={`hover:opacity-100 ${theme.colors.text}`}>Manifest</a>
+              <a href="https://corp.project-alice.us/teammember" className={`hover:opacity-100 ${theme.colors.text}`}>Teammember</a>
+              <a href="https://corp.project-alice.us/" className={`hover:opacity-100 ${theme.colors.text}`}>Company</a>
               <Link to="/contact" className={`hover:opacity-100 ${theme.colors.text}`}>Contact</Link>
             </>
           ) : (
